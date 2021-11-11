@@ -17,7 +17,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping(value = "/v")
+    @GetMapping(value = "/atLeastHaveOneBook")
     public ResponseEntity<List<UserDto>> findAtLeastHaveOneBook() {
         return ResponseEntity.ok(userService.findUserAtLeastHaveOneBook());
     }

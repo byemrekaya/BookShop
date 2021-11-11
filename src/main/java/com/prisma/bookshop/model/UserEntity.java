@@ -28,4 +28,10 @@ public class UserEntity {
 
     @OneToMany(mappedBy = "borrower")
     private List<BorrowedEntity> books;
+
+    public static UserEntity fromId(Long id){
+        UserEntity instance = new UserEntity();
+        instance.id = id;
+        return instance;
+    }
 }
